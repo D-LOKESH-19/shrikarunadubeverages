@@ -1,12 +1,13 @@
 // MyGalleryHeader.jsx (Version with Props)
 import React from 'react';
 import { Link } from 'react-router-dom';
+import defaultBgImage from "../assets/images/OurBrand-img-bg.png";
 const MyGalleryHeader = ({
   title = "Explore Our Brands Products",
   subtitle = "Discover breathtaking moments captured from around the world, explore a world of refreshing flavors.",
-  backgroundImage = "../src/assets/images/OurBrand-img-bg.png",
+  backgroundImage = defaultBgImage,
   showButton = true,
-  buttonText = "ENQUIRE NOW ->",
+  buttonText = "ENQUIRE NOW →",
   height = "30vh",
   minHeight = "300px"
 }) => {
