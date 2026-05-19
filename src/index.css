@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Inter', 'Poppins';
+}
+/* conveyor track */
+.snake-track {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  animation: moveTrack 3.5s linear infinite;
+}
+
+/* snake fruit */
+.snake-item {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  animation: snakeWave 2s ease-in-out infinite;
+}
+
+/* horizontal slide (seamless loop) */
+@keyframes moveTrack {
+  0% {
+    transform: translateX(50);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* continuous snake wave */
+@keyframes snakeWave {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-6px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
